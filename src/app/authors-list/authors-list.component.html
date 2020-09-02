@@ -1,0 +1,27 @@
+<section class="authors">
+   <table class="table table-hover">
+      <thead>
+         <tr>
+            <th scope="col">Фамилия</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Отчество</th>
+            <th scope="col">Дата рождения</th>
+            <th scope="col">Список книг</th>
+         </tr>
+      </thead>
+      <tbody *ngFor="let userName of userList">
+         <tr>
+            <td>{{userName.name}}</td>
+            <td>{{userName.username}}</td>
+            <td>{{userName.company.name}}</td>
+            <td>{{userName.data}}</td>
+            <td>
+               <select #book>
+                   <option value="{{name.name}}" *ngFor="let name of userName.books">{{name.name}}</option>
+               </select>
+               <button class="btn btn-primary " (click)="show(book.value)">Посмотреть выбранную книгу</button>
+          </td>
+         </tr>
+      </tbody>
+   </table>
+</section>

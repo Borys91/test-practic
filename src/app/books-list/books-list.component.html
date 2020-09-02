@@ -1,0 +1,8 @@
+<div class="container">
+   <ul *ngIf="books">
+      <li><strong>Название книги:</strong>{{books.name}}</li>
+      <li><strong>Количество страниц:</strong>{{books.numberOfPages}}</li>
+      <li><strong>Жанр книги:</strong>{{books.genre}}</li>
+   </ul>
+   <button class="btn btn-secondary" (click)="goBack()">GoBack</button>
+</div>
